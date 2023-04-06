@@ -7,7 +7,6 @@ chat_id = 706100023 # Ваш chat ID, не меняйте название пе�
 def solution(x: np.array) -> float:
      from scipy.stats import norm
      error_dist = lambda n: -49 + np.exp(1)
-     n = len(x)
      v_true = np.random.uniform(0, 50, n) # истинные значения скоростей
      v_error = error_dist(n) # случайная ошибка измерения скорости
      v_observed = v_true + v_error # наблюдаемые значения скоростей
