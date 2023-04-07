@@ -13,7 +13,7 @@ def solution(x: np.array) -> float:
       measurements = speeds + np.array([error_dist(x) for x in range(num)])
     variances = []
     for i in range(num):
-      variances.append(1/np.exp(i+1)**2)
+      variances.append(1/np.exp(i)**2)
     weights = 1/np.asarray(variances)
     theta_hat = np.sum(weights * measurements) / np.sum(weights)
     return theta_hat
